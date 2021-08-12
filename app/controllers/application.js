@@ -16,9 +16,14 @@ export default class ApplicationController extends Controller {
   }
 
   @action
-  testTransition() {
-    console.log('should transition to ?test=foo');
+  stepOne() {
+    console.log('should transition to /some-route/');
+    this.router.transitionTo('/some-route/');
+  }
+
+  @action
+  stepTwo() {
+    console.log('should transition to /some-route/?test=foo');
     this.router.transitionTo('/some-route/?test=foo');
-    
   }
 }
