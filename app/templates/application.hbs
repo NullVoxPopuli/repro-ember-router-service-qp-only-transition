@@ -1,7 +1,8 @@
 <button 
-  data-lazy="I know this should be a link" 
-  {{on 'click' this.testTransition}}>click the button</button>
+  data-lazy="I know this should be a link" type="button" {{on 'click' this.testTransition}}>click the button</button>
 <br>
 <br>
 QueryParams: <pre><code>{{this.qps}}</code></pre><br>
 URL: <pre><code>{{this.currentUrl}}</code></pre>
+
+{{outlet}}
