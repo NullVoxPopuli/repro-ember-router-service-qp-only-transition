@@ -1,7 +1,7 @@
-<h1>Welcome to {{this.appName}}</h1>
+<button 
+  data-lazy="I know this should be a link" 
+  {{on 'click' this.testTransition}}>click the button</button>
 <br>
-<button {{on 'click' this.testTransition}}>yeah, I know</button>
 <br>
-<br>
-<pre><code>{{this.qps}}</code></pre><br>
-<pre><code>{{this.currentURL}}</code></pre>
+QueryParams: <pre><code>{{this.qps}}</code></pre><br>
+URL: <pre><code>{{this.currentUrl}}</code></pre>
