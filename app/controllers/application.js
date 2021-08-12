@@ -8,7 +8,15 @@ export default class ApplicationController extends Controller {
   appName = 'Ember Twiddle';
 
   @service router;
-  
+
+  get currentUrl() {
+    return this.router.currentURL;
+  }
+
+  get qps() {
+    return JSON.stringify(this.router.currentRoute.queryParams, null, 2);
+  }
+
   @action
   testTransition() {
     console.log('should transition to ?test=foo');
