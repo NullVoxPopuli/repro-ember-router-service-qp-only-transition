@@ -5,8 +5,6 @@ import { inject as service } from '@ember/service';
 export default class ApplicationController extends Controller {
   queryParams = ['test'];
 
-  appName = 'Ember Twiddle';
-
   @service router;
 
   get currentUrl() {
